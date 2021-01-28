@@ -6,7 +6,6 @@ import liquibase.database.Database;
 import liquibase.exception.DatabaseException;
 import liquibase.ext.vertica.database.VerticaDatabase;
 import liquibase.ext.vertica.structure.Projection;
-import liquibase.ext.vertica.structure.Segmentation;
 import liquibase.snapshot.CachedRow;
 import liquibase.snapshot.DatabaseSnapshot;
 import liquibase.snapshot.InvalidExampleException;
@@ -17,8 +16,6 @@ import liquibase.util.StringUtil;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.

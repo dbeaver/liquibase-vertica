@@ -32,7 +32,6 @@ public class IndexSnapshotGeneratorVertica extends IndexSnapshotGenerator {
 
     @Override
     protected DatabaseObject snapshotObject(DatabaseObject example, DatabaseSnapshot snapshot) throws DatabaseException, InvalidExampleException {
-        System.out.println("in index addTo");
         return null;
     }
 

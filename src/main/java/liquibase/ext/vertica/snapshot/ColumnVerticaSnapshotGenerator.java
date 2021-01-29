@@ -11,7 +11,6 @@ import liquibase.exception.UnexpectedLiquibaseException;
 import liquibase.ext.vertica.database.VerticaDatabase;
 import liquibase.ext.vertica.structure.ColumnVertica;
 import liquibase.ext.vertica.structure.Projection;
-import liquibase.logging.LogFactory;
 import liquibase.snapshot.CachedRow;
 import liquibase.snapshot.DatabaseSnapshot;
 import liquibase.snapshot.InvalidExampleException;
@@ -85,8 +84,7 @@ public class ColumnVerticaSnapshotGenerator extends JdbcSnapshotGenerator { //ex
             return;
         }
         if (foundObject instanceof Projection) {
-            System.out.println("in vert col addTo, found: " + foundObject.getName());
-            Database database = snapshot.getDatabase();
+            //Database database = snapshot.getDatabase();
             Projection relation = (Projection) foundObject;
             List<CachedRow> allColumnsMetadataRs = null;
             try {

@@ -84,7 +84,6 @@ public class ColumnVerticaSnapshotGenerator extends JdbcSnapshotGenerator { //ex
             return;
         }
         if (foundObject instanceof Projection) {
-            System.out.println("in vert col addTo, found: " + foundObject.getName());
             //Database database = snapshot.getDatabase();
             Projection relation = (Projection) foundObject;
             List<CachedRow> allColumnsMetadataRs = null;

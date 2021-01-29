@@ -90,7 +90,6 @@ public class VerticaDatabase extends  AbstractJdbcDatabase{
 
     @Override
         public boolean isCorrectDatabaseImplementation(DatabaseConnection conn) throws DatabaseException {
-            System.out.println("checking for vertica");
             return PRODUCT_NAME.equalsIgnoreCase(conn.getDatabaseProductName());
         }
 
@@ -313,7 +312,6 @@ public class VerticaDatabase extends  AbstractJdbcDatabase{
                 ResultSet resultSet = ((JdbcConnection) connection).createStatement().executeQuery("SELECT CURRENT_SCHEMA");
                 resultSet.next();
                 String schema = resultSet.getString(1);
-                System.out.println("schema_name: "+schema);
                 return schema;
             } catch (Exception e) {
                 Scope.getCurrentScope().getLog(getClass()).info("Error getting default schema", e);

@@ -1,4 +1,3 @@
 liquibase.ext.vertica.datatype.BinaryType
 liquibase.ext.vertica.datatype.LongBinaryType
 liquibase.ext.vertica.datatype.LongVarcharType
-liquibase.ext.vertica.datatype.VarBinaryType

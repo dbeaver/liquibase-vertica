@@ -99,9 +99,9 @@ public class CreateTableGeneratorVertica extends AbstractSqlGenerator<CreateTabl
             }
             if (!isAutoIncrementColumn) { sql.append(" ").append(columnType);}
 
+            Object defaultValue = statement.getDefaultValue(column);
             // for the serial data type in postgres, there should be no default value
-            if (!columnType.isAutoIncrement() && statement.getDefaultValue(column) != null) {
-                Object defaultValue = statement.getDefaultValue(column);
+            if (!columnType.isAutoIncrement() && defaultValue != null && defaultValue.toString().length() != 0) {
                 sql.append(" DEFAULT ");
                 sql.append(statement.getColumnTypes().get(column).objectToSql(defaultValue, database));
             }

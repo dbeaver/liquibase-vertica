@@ -4,3 +4,4 @@ liquibase.ext.vertica.snapshot.ProjectionSnapshotGenerator
 liquibase.ext.vertica.snapshot.SchemaSnapshotGenerator
 liquibase.ext.vertica.snapshot.TableSnapshotGeneratorVertica
 liquibase.ext.vertica.snapshot.UniqueConstraintSnapshotGeneratorVertica
+liquibase.ext.vertica.snapshot.SequenceSnapshotGeneratorVertica
